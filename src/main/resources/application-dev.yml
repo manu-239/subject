@@ -1,0 +1,32 @@
+server:
+    port: 9500
+
+#spring:
+#  datasource:
+#    url: jdbc:h2:mem:backend
+#    driver-class-name: org.h2.Driver
+#    username: sa
+#    password:
+#
+#  h2:
+#    console:
+#      enabled: true
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/subject?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+#logging:
+#  path: /
+#  level:
+#    org.springframework: INFO
+#    root: ERROR
+#    com.manh.cp.ext.custom.ui: DEBUG
+#  file: log
